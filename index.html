@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Analyst Portfolio | Business Intelligence & Analytics</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <div class="badge">Open to Data Analyst & BI Roles</div>
+      <h1>Data Analyst & Insights Specialist</h1>
+      <p class="bio">
+        Transforming raw transactional records, complex SQL data models, and behavioral data into actionable business strategy and executive dashboards.
+      </p>
+      <div class="links">
+        <a href="https://github.com/yourusername" target="_blank" class="btn">GitHub Profile</a>
+        <a href="mailto:your.email@example.com" class="btn btn-secondary">Contact Me</a>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2 class="section-title">Technical Competencies</h2>
+      <div class="skills-grid">
+        <div class="skill-pill">SQL (PostgreSQL, DuckDB)</div>
+        <div class="skill-pill">Python (Pandas, Scikit-Learn)</div>
+        <div class="skill-pill">Streamlit / Power BI</div>
+        <div class="skill-pill">Cohort & Retention Analysis</div>
+        <div class="skill-pill">Customer Lifetime Value (LTV) & RFM</div>
+        <div class="skill-pill">Predictive Classification & EDA</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Featured Portfolio Projects</h2>
+      
+      <!-- Project 1 -->
+      <article class="project-card">
+        <div class="project-header">
+          <span class="project-tag">Advanced SQL & Analytics</span>
+          <h3>Customer Cohort Retention & RFM Segmentation Engine</h3>
+        </div>
+        <img src="assets/cohort_retention_heatmap.png" alt="Cohort Retention Matrix" class="project-img" />
+        <p class="project-desc">
+          Engineered multi-level Common Table Expressions (CTEs) and window functions to compute multi-month customer retention decay and segment buyers into distinct behavioral cohorts.
+        </p>
+        <ul class="project-highlights">
+          <li><strong>Quantified Retention:</strong> Discovered an average customer retention decay leveling out between month 3 and month 5 across multi-year purchase logs.</li>
+          <li><strong>Segmentation:</strong> Developed an RFM scoring model via <code>NTILE(4)</code> window functions to isolate high-value VIP buyers from at-risk accounts.</li>
+          <li><strong>Tech Stack:</strong> SQL (DuckDB/PostgreSQL), CTEs, Window Functions, Seaborn.</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://github.com/yourusername/sql-cohort-retention" target="_blank">View SQL Repository →</a>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-card">
+        <div class="project-header">
+          <span class="project-tag">Python & Predictive Analytics</span>
+          <h3>Customer Churn Prediction Engine & Revenue Risk Diagnostics</h3>
+        </div>
+        <img src="assets/churn_feature_importance.png" alt="Churn Feature Importance" class="project-img" />
+        <p class="project-desc">
+          Conducted an end-to-end exploratory analysis and deployed a Random Forest classifier to detect early warning signals of subscriber cancellation and prioritize proactive retention efforts.
+        </p>
+        <ul class="project-highlights">
+          <li><strong>Key Drivers:</strong> Identified customer tenure, total charges, and contract commitment structure as the primary indicators influencing churn risk.</li>
+          <li><strong>Model Performance:</strong> Evaluated class-imbalanced data, achieving an ROC-AUC score of 0.84 to rank accounts by churn probability.</li>
+          <li><strong>Tech Stack:</strong> Python, Pandas, Scikit-Learn, Matplotlib, Jupyter.</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://github.com/yourusername/telco-churn-ml" target="_blank">View Notebook & Analysis →</a>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project-card">
+        <div class="project-header">
+          <span class="project-tag">Business Intelligence & Reporting</span>
+          <h3>Philippine Operations & Margin Monitor Dashboard</h3>
+        </div>
+        <img src="assets/dashboard_preview.png" alt="Executive Dashboard Preview" class="project-img" />
+        <p class="project-desc">
+          Built and deployed an operational dashboard monitoring regional gross sales, blended profit margins, and return rates across major Philippine commercial centers.
+        </p>
+        <ul class="project-highlights">
+          <li><strong>Executive Visibility:</strong> Consolidated ₱67M+ in gross revenue across Luzon, Visayas, and Mindanao with real-time margin calculations.</li>
+          <li><strong>Leakage Prevention:</strong> Automated identification of high-value transactions falling below target profit thresholds (&lt; 8% margin).</li>
+          <li><strong>Tech Stack:</strong> Streamlit, Python, Pandas, Cloudflare Tunnel.</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://github.com/yourusername/ph-margin-monitor" target="_blank">View Dashboard Code →</a>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      <p>© 2026 • Designed for clarity, reproducibility, and measurable business impact.</p>
+    </footer>
+  </div>
+</body>
+</html>
