@@ -17,19 +17,19 @@
       <p class="bio">
         Transforming raw transactional records, complex SQL data models, and behavioral data into actionable business strategy and executive dashboards.
       </p>
-        <div class="links">
+      <div class="links">
         <a href="https://github.com/shinixhi" target="_blank" class="btn">GitHub Profile</a>
-        <button id="contact-btn" class="btn btn-secondary" onclick="handleContact()">Contact Me</button>
-        </div>
-        </header>
+        <button id="contact-btn" class="btn btn-secondary" onclick="openContactModal()">Contact Me</button>
+      </div>
+    </header>
 
     <section class="section">
       <h2 class="section-title">Technical Competencies</h2>
       <div class="skills-grid">
         <div class="skill-pill">SQL (PostgreSQL, DuckDB)</div>
         <div class="skill-pill">Python (Pandas, Scikit-Learn)</div>
-        <div class="skill-pill">Streamlit / Power BI</div>
-        <div class="skill-pill">Cohort & Retention Analysis</div>
+        <div class="skill-pill">Streamlit / Business Intelligence</div>
+        <div class="skill-pill">Cohort & Retention Decay</div>
         <div class="skill-pill">Customer Lifetime Value (LTV) & RFM</div>
         <div class="skill-pill">Predictive Classification & EDA</div>
       </div>
@@ -54,7 +54,7 @@
           <li><strong>Tech Stack:</strong> SQL (DuckDB/PostgreSQL), CTEs, Window Functions, Seaborn.</li>
         </ul>
         <div class="project-links">
-          <a href="https://github.com/yourusername/sql-cohort-retention" target="_blank">View SQL Repository →</a>
+          <a href="https://colab.research.google.com/drive/11i5y-vnq7AaMSqjslsB2fsYlrpNf62cE?usp=sharing" target="_blank">View Colab Notebook & SQL Queries →</a>
         </div>
       </article>
 
@@ -74,7 +74,7 @@
           <li><strong>Tech Stack:</strong> Python, Pandas, Scikit-Learn, Matplotlib, Jupyter.</li>
         </ul>
         <div class="project-links">
-          <a href="https://github.com/yourusername/telco-churn-ml" target="_blank">View Notebook & Analysis →</a>
+          <a href="https://colab.research.google.com/drive/1ZzJnZosed544QYUsPG2vkgADPz3LNnzD?usp=sharing" target="_blank">View Colab Notebook & ML Model →</a>
         </div>
       </article>
 
@@ -94,34 +94,58 @@
           <li><strong>Tech Stack:</strong> Streamlit, Python, Pandas, Cloudflare Tunnel.</li>
         </ul>
         <div class="project-links">
-          <a href="https://github.com/yourusername/ph-margin-monitor" target="_blank">View Dashboard Code →</a>
+          <a href="https://colab.research.google.com/drive/1HrXTl_ZsGofLXU9BFOxgitO6UNUXRzCp?usp=sharing" target="_blank">View Colab Notebook & Dashboard Code →</a>
         </div>
       </article>
     </section>
 
     <footer>
-      <p>© 2026 • Designed for clarity, reproducibility, and measurable business impact.</p>
+      <p>© 2026 Emerson II Muli • Built for reproducibility and measurable business impact.</p>
     </footer>
   </div>
-  <script>
-function handleContact() {
-  const email = "emersonmuli21@gmail.com";
-  navigator.clipboard.writeText(email).then(() => {
-    const btn = document.getElementById("contact-btn");
-    const originalText = btn.innerText;
-    btn.innerText = "Email Copied!";
-    btn.style.borderColor = "var(--accent)";
-    
-    setTimeout(() => {
-      btn.innerText = originalText;
-      btn.style.borderColor = "";
-    }, 2500);
 
-    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email}`, '_blank');
-  }).catch(() => {
-    window.location.href = `mailto:${email}`;
-  });
-}
-</script>
+  <!-- Contact Modal -->
+  <div id="contact-modal" class="modal-overlay" onclick="closeOnOverlayClick(event)">
+    <div class="modal-box">
+      <h3>Get in Touch</h3>
+      <p>Feel free to reach out directly via email for data analytics roles and project inquiries.</p>
+      <div class="email-container">
+        <span id="target-email">emersonmuli21@gmail.com</span>
+      </div>
+      <div class="modal-actions">
+        <button id="copy-btn" class="btn" onclick="copyEmailAddress()">Copy Email</button>
+        <button class="modal-close-btn" onclick="closeContactModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openContactModal() {
+      document.getElementById('contact-modal').style.display = 'flex';
+    }
+
+    function closeContactModal() {
+      document.getElementById('contact-modal').style.display = 'none';
+      const copyBtn = document.getElementById('copy-btn');
+      copyBtn.innerText = 'Copy Email';
+    }
+
+    function closeOnOverlayClick(e) {
+      if (e.target.id === 'contact-modal') {
+        closeContactModal();
+      }
+    }
+
+    function copyEmailAddress() {
+      const email = document.getElementById('target-email').innerText;
+      navigator.clipboard.writeText(email).then(() => {
+        const copyBtn = document.getElementById('copy-btn');
+        copyBtn.innerText = 'Copied to Clipboard!';
+        setTimeout(() => {
+          copyBtn.innerText = 'Copy Email';
+        }, 2500);
+      });
+    }
+  </script>
 </body>
 </html>
