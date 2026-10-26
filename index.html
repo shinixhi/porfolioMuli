@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Emerson II Muli | Data Analyst & BI Specialist</title>
+  <title>Emerson II Muli | Data Analyst Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,12 +12,12 @@
 <body>
   <div class="container">
     
-    <!-- Hero Section -->
+    <!-- Hero Header -->
     <header class="hero">
       <div class="badge">Open to Roles: Data Analyst & BI Specialist</div>
       <h1>Emerson II Muli</h1>
       <p class="bio">
-        Data Analyst specializing in SQL modeling, customer cohort economics, churn prediction engines, and executive business intelligence dashboards.
+        Data Analyst specializing in SQL data modeling, customer cohort economics, churn prediction engines, and executive business intelligence dashboards.
       </p>
       <div class="links">
         <a href="https://github.com/shinixhi" target="_blank" class="btn">GitHub Profile</a>
@@ -118,16 +118,16 @@
       </article>
     </section>
 
-    <!-- Unified Contact Card -->
+    <!-- Clean Contact Section -->
     <section id="contact" class="section">
       <div class="contact-card">
         <h2>Let's Connect</h2>
         <p>
-          I am actively seeking Data Analyst, BI, and Analytics Engineering roles. Feel free to reach out directly:
+          I am actively seeking Data Analyst, BI, and Analytics Engineering roles. Reach out directly:
         </p>
         <div class="email-box">
-          <span class="email-text" id="email-address">emersonmuli21@gmail.com</span>
-          <button class="copy-button" id="copy-btn" onclick="copyEmail()">Copy</button>
+          <span class="email-text" id="email-text">emersonmuli21@gmail.com</span>
+          <button class="copy-btn" id="copy-btn" onclick="copyEmail()">Copy</button>
         </div>
       </div>
     </section>
@@ -139,17 +139,15 @@
 
   <script>
     function copyEmail() {
-      const email = document.getElementById('email-address').innerText;
+      const email = document.getElementById('email-text').innerText;
       navigator.clipboard.writeText(email).then(() => {
         const btn = document.getElementById('copy-btn');
         btn.innerText = 'Copied!';
-        btn.style.background = '#10b981';
-        btn.style.borderColor = '#10b981';
+        btn.classList.add('copied');
         setTimeout(() => {
           btn.innerText = 'Copy';
-          btn.style.background = '';
-          btn.style.borderColor = '';
-        }, 2200);
+          btn.classList.remove('copied');
+        }, 2000);
       });
     }
   </script>
