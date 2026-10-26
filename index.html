@@ -3,55 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Data Analyst Portfolio | Business Intelligence & Analytics</title>
+  <title>Emerson II Muli | Data Analyst & BI Specialist</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
+    
+    <!-- Hero Section -->
     <header class="hero">
-      <div class="badge">Open to Data Analyst & BI Roles</div>
-      <h1>Data Analyst & Insights Specialist</h1>
+      <div class="badge">Open to Roles: Data Analyst & BI Specialist</div>
+      <h1>Emerson II Muli</h1>
       <p class="bio">
-        Transforming raw transactional records, complex SQL data models, and behavioral data into actionable business strategy and executive dashboards.
+        Data Analyst specializing in SQL modeling, customer cohort economics, churn prediction engines, and executive business intelligence dashboards.
       </p>
       <div class="links">
         <a href="https://github.com/shinixhi" target="_blank" class="btn">GitHub Profile</a>
-        <button id="contact-btn" class="btn btn-secondary" onclick="openContactModal()">Contact Me</button>
+        <a href="#contact" class="btn btn-secondary">Get in Touch ↓</a>
       </div>
     </header>
 
+    <!-- Technical Competencies -->
     <section class="section">
       <h2 class="section-title">Technical Competencies</h2>
       <div class="skills-grid">
         <div class="skill-pill">SQL (PostgreSQL, DuckDB)</div>
         <div class="skill-pill">Python (Pandas, Scikit-Learn)</div>
-        <div class="skill-pill">Streamlit / Business Intelligence</div>
-        <div class="skill-pill">Cohort & Retention Decay</div>
-        <div class="skill-pill">Customer Lifetime Value (LTV) & RFM</div>
-        <div class="skill-pill">Predictive Classification & EDA</div>
+        <div class="skill-pill">Streamlit / Cloudflare Deployments</div>
+        <div class="skill-pill">Cohort Retention & LTV Analysis</div>
+        <div class="skill-pill">RFM Customer Segmentation</div>
+        <div class="skill-pill">Random Forest Classification & EDA</div>
       </div>
     </section>
 
+    <!-- Featured Projects -->
     <section class="section">
-      <h2 class="section-title">Featured Portfolio Projects</h2>
+      <h2 class="section-title">Featured Projects</h2>
       
       <!-- Project 1 -->
       <article class="project-card">
         <div class="project-header">
-          <span class="project-tag">Advanced SQL & Analytics</span>
+          <span class="project-tag">Advanced SQL & Customer Analytics</span>
           <h3>Customer Cohort Retention & RFM Segmentation Engine</h3>
         </div>
-        <img src="assets/cohort_retention_heatmap.png" alt="Cohort Retention Matrix" class="project-img" />
+        <div class="metric-chips">
+          <span class="chip">35.3% Month 1 Retention</span>
+          <span class="chip">4 RFM Quartiles</span>
+          <span class="chip">DuckDB Multi-CTEs</span>
+        </div>
+        <img src="assets/cohort_retention_heatmap.png" alt="Cohort Retention Matrix Heatmap" class="project-img" />
         <p class="project-desc">
           Engineered multi-level Common Table Expressions (CTEs) and window functions to compute multi-month customer retention decay and segment buyers into distinct behavioral cohorts.
         </p>
         <ul class="project-highlights">
-          <li><strong>Quantified Retention:</strong> Discovered an average customer retention decay leveling out between month 3 and month 5 across multi-year purchase logs.</li>
-          <li><strong>Segmentation:</strong> Developed an RFM scoring model via <code>NTILE(4)</code> window functions to isolate high-value VIP buyers from at-risk accounts.</li>
-          <li><strong>Tech Stack:</strong> SQL (DuckDB/PostgreSQL), CTEs, Window Functions, Seaborn.</li>
+          <li><strong>Retention Trajectory:</strong> Quantified user drop-off across monthly cohorts, finding stabilization around months 3–5.</li>
+          <li><strong>RFM Segmentation:</strong> Classified customer base using <code>NTILE(4)</code> scoring across Recency, Frequency, and Monetary value.</li>
+          <li><strong>Stack:</strong> SQL (DuckDB/PostgreSQL), Window Functions, Pandas, Seaborn.</li>
         </ul>
         <div class="project-links">
           <a href="https://colab.research.google.com/drive/11i5y-vnq7AaMSqjslsB2fsYlrpNf62cE?usp=sharing" target="_blank">View Colab Notebook & SQL Queries →</a>
@@ -61,17 +70,22 @@
       <!-- Project 2 -->
       <article class="project-card">
         <div class="project-header">
-          <span class="project-tag">Python & Predictive Analytics</span>
-          <h3>Customer Churn Prediction Engine & Revenue Risk Diagnostics</h3>
+          <span class="project-tag">Machine Learning & Churn Risk</span>
+          <h3>Customer Churn Prediction Engine & Diagnostic Model</h3>
+        </div>
+        <div class="metric-chips">
+          <span class="chip">0.84 ROC-AUC</span>
+          <span class="chip">Random Forest Classifier</span>
+          <span class="chip">Tenure & Contract Drivers</span>
         </div>
         <img src="assets/churn_feature_importance.png" alt="Churn Feature Importance" class="project-img" />
         <p class="project-desc">
-          Conducted an end-to-end exploratory analysis and deployed a Random Forest classifier to detect early warning signals of subscriber cancellation and prioritize proactive retention efforts.
+          Conducted an end-to-end exploratory analysis and deployed a Random Forest classifier to identify early warning signals of subscriber cancellation and rank risk factors.
         </p>
         <ul class="project-highlights">
-          <li><strong>Key Drivers:</strong> Identified customer tenure, total charges, and contract commitment structure as the primary indicators influencing churn risk.</li>
-          <li><strong>Model Performance:</strong> Evaluated class-imbalanced data, achieving an ROC-AUC score of 0.84 to rank accounts by churn probability.</li>
-          <li><strong>Tech Stack:</strong> Python, Pandas, Scikit-Learn, Matplotlib, Jupyter.</li>
+          <li><strong>Key Drivers:</strong> Isolated account tenure, fiber optic internet, and month-to-month contracts as primary drivers of subscriber attrition.</li>
+          <li><strong>Predictive Accuracy:</strong> Trained on imbalanced subscription logs, achieving an 0.84 ROC-AUC to rank accounts by churn probability.</li>
+          <li><strong>Stack:</strong> Python, Scikit-Learn, Pandas, Matplotlib, Seaborn.</li>
         </ul>
         <div class="project-links">
           <a href="https://colab.research.google.com/drive/1ZzJnZosed544QYUsPG2vkgADPz3LNnzD?usp=sharing" target="_blank">View Colab Notebook & ML Model →</a>
@@ -81,17 +95,22 @@
       <!-- Project 3 -->
       <article class="project-card">
         <div class="project-header">
-          <span class="project-tag">Business Intelligence & Reporting</span>
+          <span class="project-tag">Operational Business Intelligence</span>
           <h3>Philippine Operations & Margin Monitor Dashboard</h3>
         </div>
-        <img src="assets/dashboard_preview.png" alt="Executive Dashboard Preview" class="project-img" />
+        <div class="metric-chips">
+          <span class="chip">₱67.9M Monitored Revenue</span>
+          <span class="chip">Streamlit & Cloudflare Tunnel</span>
+          <span class="chip">Margin Leakage Alerts</span>
+        </div>
+        <img src="assets/dashboard_preview.png" alt="Executive Operations Dashboard Preview" class="project-img" />
         <p class="project-desc">
           Built and deployed an operational dashboard monitoring regional gross sales, blended profit margins, and return rates across major Philippine commercial centers.
         </p>
         <ul class="project-highlights">
-          <li><strong>Executive Visibility:</strong> Consolidated ₱67M+ in gross revenue across Luzon, Visayas, and Mindanao with real-time margin calculations.</li>
-          <li><strong>Leakage Prevention:</strong> Automated identification of high-value transactions falling below target profit thresholds (&lt; 8% margin).</li>
-          <li><strong>Tech Stack:</strong> Streamlit, Python, Pandas, Cloudflare Tunnel.</li>
+          <li><strong>Executive Visibility:</strong> Consolidated ₱67M+ in gross revenue across NCR, Luzon, Visayas, and Mindanao with real-time margin tracking.</li>
+          <li><strong>Leakage Prevention:</strong> Automated flagging of transactions falling below target profit thresholds (&lt; 8% margin).</li>
+          <li><strong>Stack:</strong> Streamlit, Python, Pandas, Cloudflare Tunnel.</li>
         </ul>
         <div class="project-links">
           <a href="https://colab.research.google.com/drive/1HrXTl_ZsGofLXU9BFOxgitO6UNUXRzCp?usp=sharing" target="_blank">View Colab Notebook & Dashboard Code →</a>
@@ -99,51 +118,38 @@
       </article>
     </section>
 
+    <!-- Unified Contact Card -->
+    <section id="contact" class="section">
+      <div class="contact-card">
+        <h2>Let's Connect</h2>
+        <p>
+          I am actively seeking Data Analyst, BI, and Analytics Engineering roles. Feel free to reach out directly:
+        </p>
+        <div class="email-box">
+          <span class="email-text" id="email-address">emersonmuli21@gmail.com</span>
+          <button class="copy-button" id="copy-btn" onclick="copyEmail()">Copy</button>
+        </div>
+      </div>
+    </section>
+
     <footer>
-      <p>© 2026 Emerson II Muli • Built for reproducibility and measurable business impact.</p>
+      <p>© 2026 Emerson II Muli • Built for data rigor and business impact.</p>
     </footer>
   </div>
 
-  <!-- Contact Modal -->
-  <div id="contact-modal" class="modal-overlay" onclick="closeOnOverlayClick(event)">
-    <div class="modal-box">
-      <h3>Get in Touch</h3>
-      <p>Feel free to reach out directly via email for data analytics roles and project inquiries.</p>
-      <div class="email-container">
-        <span id="target-email">emersonmuli21@gmail.com</span>
-      </div>
-      <div class="modal-actions">
-        <button id="copy-btn" class="btn" onclick="copyEmailAddress()">Copy Email</button>
-        <button class="modal-close-btn" onclick="closeContactModal()">Close</button>
-      </div>
-    </div>
-  </div>
-
   <script>
-    function openContactModal() {
-      document.getElementById('contact-modal').style.display = 'flex';
-    }
-
-    function closeContactModal() {
-      document.getElementById('contact-modal').style.display = 'none';
-      const copyBtn = document.getElementById('copy-btn');
-      copyBtn.innerText = 'Copy Email';
-    }
-
-    function closeOnOverlayClick(e) {
-      if (e.target.id === 'contact-modal') {
-        closeContactModal();
-      }
-    }
-
-    function copyEmailAddress() {
-      const email = document.getElementById('target-email').innerText;
+    function copyEmail() {
+      const email = document.getElementById('email-address').innerText;
       navigator.clipboard.writeText(email).then(() => {
-        const copyBtn = document.getElementById('copy-btn');
-        copyBtn.innerText = 'Copied to Clipboard!';
+        const btn = document.getElementById('copy-btn');
+        btn.innerText = 'Copied!';
+        btn.style.background = '#10b981';
+        btn.style.borderColor = '#10b981';
         setTimeout(() => {
-          copyBtn.innerText = 'Copy Email';
-        }, 2500);
+          btn.innerText = 'Copy';
+          btn.style.background = '';
+          btn.style.borderColor = '';
+        }, 2200);
       });
     }
   </script>
