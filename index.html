@@ -17,11 +17,11 @@
       <p class="bio">
         Transforming raw transactional records, complex SQL data models, and behavioral data into actionable business strategy and executive dashboards.
       </p>
-      <div class="links">
+        <div class="links">
         <a href="https://github.com/shinixhi" target="_blank" class="btn">GitHub Profile</a>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=emersonmuli21@gmail.com" target="_blank" class="btn btn-secondary">Contact Me</a>
-      </div>
-    </header>
+        <button id="contact-btn" class="btn btn-secondary" onclick="handleContact()">Contact Me</button>
+        </div>
+        </header>
 
     <section class="section">
       <h2 class="section-title">Technical Competencies</h2>
@@ -103,5 +103,25 @@
       <p>© 2026 • Designed for clarity, reproducibility, and measurable business impact.</p>
     </footer>
   </div>
+  <script>
+function handleContact() {
+  const email = "emersonmuli21@gmail.com";
+  navigator.clipboard.writeText(email).then(() => {
+    const btn = document.getElementById("contact-btn");
+    const originalText = btn.innerText;
+    btn.innerText = "Email Copied!";
+    btn.style.borderColor = "var(--accent)";
+    
+    setTimeout(() => {
+      btn.innerText = originalText;
+      btn.style.borderColor = "";
+    }, 2500);
+
+    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${email}`, '_blank');
+  }).catch(() => {
+    window.location.href = `mailto:${email}`;
+  });
+}
+</script>
 </body>
 </html>
